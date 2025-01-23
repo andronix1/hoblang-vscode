@@ -1,0 +1,25 @@
+{
+  "name": "hoblang-vscode",
+  "displayName": "hoblang",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.96.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "hoblang",
+      "aliases": ["hoblang", "hoblang"],
+      "extensions": [".hob"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "hoblang",
+      "scopeName": "source.hob",
+      "path": "./syntaxes/hoblang.tmLanguage.json"
+    }]
+  }
+}
