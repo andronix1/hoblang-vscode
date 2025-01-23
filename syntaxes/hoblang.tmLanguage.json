@@ -6,6 +6,8 @@
 		{ "include": "#booleans" },
 		{ "include": "#primitives" },
 		{ "include": "#integers" },
+		{ "include": "#structs" },
+		{ "include": "#idents" },
 		{ "include": "#strings" }
 	],
 	"repository": {
@@ -19,6 +21,10 @@
 			"name": "keyword.control.hoblang",
 			"match": "\\b(true|false)\\b"
 		},
+		"idents": {
+			"name": "variable",
+			"match": "\\b([a-z_]?[a-z0-9_]+)\\b"
+		},
 		"integers": {
 			"name": "constant.numeric",
 			"match": "\\b([0-9]+)\\b"
@@ -26,6 +32,10 @@
 		"primitives": {
 			"name": "entity.name.type",
 			"match": "\\b(i8|u8|i16|u16|i32|u32|i64|u64|bool|void)\\b"
+		},
+		"structs": {
+			"name": "entity.name.type",
+			"match": "\\b([A-Z]([a-z]+)?)\\b"
 		},
 		"strings": {
 			"name": "string.quoted.double.hoblang",
