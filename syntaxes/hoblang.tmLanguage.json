@@ -8,6 +8,7 @@
 		{ "include": "#integers" },
 		{ "include": "#structs" },
 		{ "include": "#idents" },
+		{ "include": "#oneLineComments" },
 		{ "include": "#strings" }
 	],
 	"repository": {
@@ -16,6 +17,11 @@
 				"name": "keyword.control.hoblang",
 				"match": "\\b(var|import|struct|defer|type|use|fun|if|else|return|extern|module|as|while)\\b"
 			}]
+		},
+		"oneLineComments": {
+			"name": "comment.line.number-sign",
+			"begin": "#",
+			"end": "\n"
 		},
 		"booleans": {
 			"name": "keyword.control.hoblang",
@@ -35,7 +41,7 @@
 		},
 		"structs": {
 			"name": "entity.name.type",
-			"match": "\\b([A-Z]([a-z]+)?)\\b"
+			"match": "\\b([A-Z]([A-Za-z]+)?)\\b"
 		},
 		"strings": {
 			"name": "string.quoted.double.hoblang",
