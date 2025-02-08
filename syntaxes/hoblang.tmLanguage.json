@@ -6,16 +6,19 @@
 		{ "include": "#booleans" },
 		{ "include": "#primitives" },
 		{ "include": "#integers" },
+		{ "include": "#hexIntegers" },
+		{ "include": "#constants" },
 		{ "include": "#structs" },
 		{ "include": "#idents" },
-		{ "include": "#oneLineComments" },
-		{ "include": "#strings" }
+		{ "include": "#strings" },
+		{ "include": "#chars" },
+		{ "include": "#oneLineComments" }
 	],
 	"repository": {
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.hoblang",
-				"match": "\\b(var|import|struct|defer|type|use|fun|if|else|return|extern|module|as|while)\\b"
+				"match": "\\b(volatile|const|asm|var|import|struct|defer|type|use|fun|if|else|return|extern|module|as|while)\\b"
 			}]
 		},
 		"oneLineComments": {
@@ -27,6 +30,10 @@
 			"name": "keyword.control.hoblang",
 			"match": "\\b(true|false)\\b"
 		},
+		"constants": {
+			"name": "variable",
+			"match": "\\b([A-Z_]+)\\b"
+		},
 		"idents": {
 			"name": "variable",
 			"match": "\\b([a-z_]?[a-z0-9_]+)\\b"
@@ -35,6 +42,10 @@
 			"name": "constant.numeric",
 			"match": "\\b([0-9]+)\\b"
 		},
+		"hexIntegers": {
+			"name": "constant.numeric",
+			"match": "\\b(0x[0-9a-fA-F]+)\\b"
+		},
 		"primitives": {
 			"name": "entity.name.type",
 			"match": "\\b(i8|u8|i16|u16|i32|u32|i64|u64|bool|void)\\b"
@@ -42,6 +53,17 @@
 		"structs": {
 			"name": "entity.name.type",
 			"match": "\\b([A-Z]([A-Za-z]+)?)\\b"
+		},
+		"chars": {
+			"name": "string.quoted.double.hoblang",
+			"begin": "'",
+			"end": "'",
+			"patterns": [
+				{
+					"name": "constant.character.escape.hoblang",
+					"match": "\\\\."
+				}
+			]
 		},
 		"strings": {
 			"name": "string.quoted.double.hoblang",
