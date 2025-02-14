@@ -18,7 +18,7 @@
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.hoblang",
-				"match": "\\b(volatile|const|asm|var|import|struct|defer|type|use|fun|if|else|return|extern|module|as|while)\\b"
+				"match": "\\b(volatile|sizeof|const|asm|var|import|struct|defer|type|use|fun|if|else|return|extern|module|as|while)\\b"
 			}]
 		},
 		"oneLineComments": {
